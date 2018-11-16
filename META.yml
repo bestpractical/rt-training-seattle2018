@@ -16,8 +16,10 @@ meta-spec:
 name: RT-Training-Seattle2018
 no_index:
   directory:
+    - etc
     - html
     - inc
+    - static
 requires:
   perl: 5.8.3
 resources:

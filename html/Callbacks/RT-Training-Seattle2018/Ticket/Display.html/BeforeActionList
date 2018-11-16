@@ -1,0 +1,18 @@
+
+<h1>I'm in UR RT, messin' with stuff!!!!!</h1>
+
+<%init>
+unless ( $Ticket->QueueObj->Name eq 'Hyatt' ){
+    return;
+}
+
+use Data::Printer;
+
+warn "ARGS has: " . p(%ARGS);
+warn "Ticket has: " . p($Ticket);
+
+</%init>
+
+<%args>
+$Ticket
+</%args>

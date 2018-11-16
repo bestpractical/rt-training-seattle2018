@@ -4,6 +4,8 @@ package RT::Training::Seattle2018;
 
 our $VERSION = '0.01';
 
+#RT->AddStyleSheets('rt-training-seattle2018.css');
+
 =head1 NAME
 
 RT-Training-Seattle2018 - Customizations from training

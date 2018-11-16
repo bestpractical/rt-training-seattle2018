@@ -1,0 +1,18 @@
+
+our @ScripActions;
+our @Scrips;
+
+@ScripActions = ({
+    Name        => 'Set Escalated',    # loc
+    Description => "Some escalation date to now",
+    ExecModule => 'SetEscalatedDate',
+});
+
+@Scrips = ({
+       Description    => 'On escalation set escalated date to now.',
+       ScripCondition => 'On Escalation1',
+       ScripAction    => 'Set Escalated',
+       Template       => 'Blank', 
+});
+
+1;

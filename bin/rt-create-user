@@ -1,0 +1,29 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use RT -init;
+# that's all
+
+# Run me with perl -Ilib local/plugins/RT-Training-Seattle2018/bin/rt-create-user
+
+print "Running\n";
+
+my $user = RT::User->new(RT->SystemUser);
+
+my ($ok, $msg) = $user->Create(
+    Privileged => 1,
+    EmailAddress => 'user6@example.com',
+    Name => 'user6',
+    Password => 'password'
+);
+
+$user->AddCustomFieldValue( Field => 'Mobile2' , Value => '111-555-1212' );
+
+print "User created with id " . $user->Id . "\n" if $ok;
+
+my $group = RT::Group->new(RT->SystemUser);
+$group->LoadUserDefinedGroup('Support');
+
+($ok,$msg) = $group->AddMember( $user->Id );

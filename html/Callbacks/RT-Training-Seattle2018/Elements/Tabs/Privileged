@@ -1,0 +1,7 @@
+<%init>
+warn "Running menu callback";
+PageMenu()->delete('jumbo');
+use Data::Printer;
+my $page_menu = PageMenu;
+warn "The menu looks like" . p($page_menu);
+</%init>
