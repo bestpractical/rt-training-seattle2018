@@ -1,0 +1,8 @@
+<%init>
+warn "Callback is running!!!!!";
+$QueryProperties->{'OrderBy'} = 'LastUpdated';
+
+</%init>
+<%args>
+$QueryProperties
+</%args>

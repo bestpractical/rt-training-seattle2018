@@ -1,0 +1,8 @@
+<%init>
+warn "Did we do it right?";
+$$Title = loc("This user's [_1] most recently updated [_2] tickets", $ARGS{'Rows'}, $ARGS{'Description'} );
+
+</%init>
+<%args>
+$Title
+</%args>
