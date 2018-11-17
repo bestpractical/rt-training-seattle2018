@@ -1,0 +1,6 @@
+<%INIT>
+push @{$Fields}, 'LinkToCreateTransaction';
+</%INIT>
+<%ARGS>
+$Fields => undef
+</%ARGS>

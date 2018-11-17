@@ -12,7 +12,7 @@ our @Scrips;
        Description    => 'On escalation set escalated date to now.',
        ScripCondition => 'On Escalation1',
        ScripAction    => 'Set Escalated',
-       Template       => 'Blank', 
+       Template       => 'Blank',
 });
 
 1;

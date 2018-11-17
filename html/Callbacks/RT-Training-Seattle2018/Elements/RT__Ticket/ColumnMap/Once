@@ -1,0 +1,21 @@
+<%init>
+    $COLUMN_MAP->{'LinkToCreateTransaction'} = {
+            title     => 'Create Transaction', # loc
+            attribute => 'Create Transaction',
+            value     => sub {
+                my $ticket = shift;
+                my $txns = $ticket->Transactions;
+                $txns->Limit(
+                    FIELD => 'Type',
+                    VALUE => 'Create' );
+                return \('<a href="'. RT->Config->Get('WebPath') .'/Ticket/Display.html?id='
+                    . $ticket->Id .'#txn-'. $txns->First->Id .'">'),
+                    $ticket->Id, \'</a>';
+            }
+    };
+</%init>
+<%args>
+$COLUMN_MAP
+</%args>
+
+
